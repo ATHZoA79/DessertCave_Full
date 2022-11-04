@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html, ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+input, button {
+  border: unset;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../img/IMG_2021.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+main #card {
+  width: 418px;
+  height: 559px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  background-color: white;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+main #card #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #card #logo img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: center;
+}
+main #card #store_name {
+  width: 340px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid black;
+  margin-top: 24px;
+}
+main #card #email,
+main #card #password {
+  width: 300px;
+  height: 55px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  margin-top: 18px;
+}
+main #card #log_in {
+  width: 300px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(141, 215, 204);
+  margin-top: 44px;
+  transition: 0.2s;
+}
+main #card #log_in:hover {
+  background-color: rgb(67, 133, 123);
+  color: #fff;
+}
+main #card #log_in a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+}
+main #card #accont {
+  margin: 50px 0 30px;
+}/*# sourceMappingURL=backEnd-index.css.map */

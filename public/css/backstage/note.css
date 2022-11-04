@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html, ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+input, button {
+  border: unset;
+}
+
+main #note {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+main #note li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+}
+main #note div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #note div button {
+  width: 50px;
+  height: 30px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+  background-color: #EFEFEF;
+  margin: 21px;
+}
+main #note div button:nth-of-type(1) {
+  background-color: rgb(141, 215, 204);
+}/*# sourceMappingURL=note.css.map */
