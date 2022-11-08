@@ -23,22 +23,22 @@ class BannerController extends Controller
         $data = Banner::find(1);
         if ($request->hasFile('banner_img1_pc')) {
             Storage::delete($data->banner_img1_pc);
-            $banner_img1_pc = Storage::putFile('public/banner', $request->banner_img1_pc);
+            $banner_img1_pc = Storage::putFile('/public/banner', $request->banner_img1_pc);
             $data->banner_img1_pc = $banner_img1_pc;
         }
         if ($request->banner_img1_phone != null) {
             Storage::delete($data->banner_img1_phone);
-            $banner_img1_phone = Storage::putFile('public/banner', $request->banner_img1_phone);
+            $banner_img1_phone = Storage::putFile('/public/banner', $request->banner_img1_phone);
             $data->banner_img1_phone = $banner_img1_phone;
         }
         if ($request->banner_img2_pc != null) {
             Storage::delete($data->banner_img2_pc);
-            $banner_img2_pc = Storage::putFile('public/banner', $request->banner_img2_pc);
+            $banner_img2_pc = Storage::putFile('/public/banner', $request->banner_img2_pc);
             $data->banner_img2_pc = $banner_img2_pc;
         }
         if ($request->banner_img2_phone != null) {
             Storage::delete($data->banner_img2_phone);
-            $banner_img2_phone = Storage::putFile('public/banner', $request->banner_img2_phone);
+            $banner_img2_phone = Storage::putFile('/public/banner', $request->banner_img2_phone);
             $data->banner_img2_phone = $banner_img2_phone;
         }
         $data->save();
