@@ -129,8 +129,8 @@
 				<div class="carousel__track-container">
 					<ul class="carousel__track">
 						<li class="carousel__slide current-slide">
-							<img class="carousel__image_pc" src="{{ '/storage/app'.$banner->banner_img1_pc }}" alt="">
-							<img class="carousel__image_phone" src="{{ '/storage/app'.$banner->banner_img1_phone }}" alt="手機">
+							<img class="carousel__image_pc" src="{{ '/storage/app/'.$banner->banner_img1_pc }}" alt="">
+							<img class="carousel__image_phone" src="{{ '/storage/app/'.$banner->banner_img1_phone }}" alt="手機">
 						</li>
 						<li class="carousel__slide">
 							<img class="carousel__image_pc" src="{{ './storage/'.$banner->banner_img2_pc }}" alt="">
