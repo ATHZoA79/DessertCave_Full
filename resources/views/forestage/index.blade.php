@@ -18,9 +18,9 @@
 	<!--分頁圖片ICON-->
 	<script src="./js/loading.js"></script>
 	<link rel="stylesheet" href="./css/loading.css">
+	<link rel="stylesheet" href="./css/toTop.css">
 	<link rel="stylesheet" href="{{ asset('/css/index.css')}}">
 	<link rel="stylesheet" href="./css/banner-swiper.css">
-	<link rel="stylesheet" href="./css/toTop.css">
 </head>
 
 <body>
