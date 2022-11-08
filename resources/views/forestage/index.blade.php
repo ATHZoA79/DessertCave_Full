@@ -235,7 +235,7 @@
 						<div class="swiper-slide">
 							<div class="swiper-product-img">
 								<img src="./img/index/chocolate-4.png" alt="">
-								<a href="./product.html" class="more-product">查看更多</a>
+								<a href="{{ route('product')}}" class="more-product">查看更多</a>
 							</div>
 						</div>
 					</div>
