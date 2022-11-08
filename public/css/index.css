@@ -580,7 +580,7 @@ main .new-product .text button:hover {
     height: 624px;
   }
 }
-@media screen and (min-width: 721px) and (max-width: 1300px) {
+@media screen and (min-width: 721px) and (max-width: 1240px) {
   main .new-product {
     background-color: unset;
   }
