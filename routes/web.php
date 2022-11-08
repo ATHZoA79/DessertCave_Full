@@ -29,10 +29,10 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/', [MainController::class, 'index'])->name('index');
-Route::get('/news', [MainController::class, 'news'])->name('news');
-Route::get('/about_us', [MainController::class, 'about_us'])->name('about_us');
-Route::get('/product', [MainController::class, 'product'])->name('product');
-Route::get('/news_detail/{id}', [MainController::class, 'news_detail']);
+Route::get('news', [MainController::class, 'news'])->name('news');
+Route::get('about_us', [MainController::class, 'about_us'])->name('about_us');
+Route::get('product', [MainController::class, 'product'])->name('product');
+Route::get('news_detail/{id}', [MainController::class, 'news_detail']);
 
 Route::prefix('admin/banner')->middleware(['auth'])->group(function() {
     Route::get('/', [BannerController::class, 'index'])->name('banner');
