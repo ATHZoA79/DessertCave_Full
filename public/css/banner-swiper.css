@@ -52,11 +52,11 @@
 
 @media screen and (max-width:720px) {
   .carousel__track-container .carousel__track .carousel__slide .carousel__image_pc {
-    display: none;
+    display: none !important;
   }
 
   .carousel__track-container .carousel__track .carousel__slide .carousel__image_phone {
-    display: block;
+    display: block !important;
   }
 }
 
