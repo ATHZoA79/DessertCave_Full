@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\News;
+use App\Http\Controllers\FilesController;
 use Illuminate\Support\Facades\Redirect;
 
 class NewsController extends Controller
@@ -21,8 +22,8 @@ class NewsController extends Controller
     public function store(Request $request) {
         // dd($request->all());
 
-        $news_img_pc = Storage::putFile('news', $request->news_img_pc);
-        $news_img_phone = Storage::putFile('news', $request->news_img_phone);
+        $news_img_pc = FilesController::imgUpload($request->news_img_pc, 'news');
+        $news_img_phone = FilesController::imgUpload($request->news_img_phone, 'news');
         $news_content = nl2br($request->news_content);
         News::create([
             'news_img_pc' => $news_img_pc,
@@ -45,15 +46,16 @@ class NewsController extends Controller
         $news = News::find($id);
         
         // Delete old files
-        Storage::delete([$news->news_img_pc, $news->news_img_phone]);
+        FilesController::deleteUpload($news->news_img_pc);
+        FilesController::deleteUpload($news->news_img_phone);
         
         // Overwrite old data 
         if ($request->hasFile('news_img_pc')) {
-            $news_img_pc = Storage::putFile('news', $request->news_img_pc);
+            $news_img_pc = FilesController::imgUpload($request->news_img_pc, 'news');
             $news->news_img_pc = $news_img_pc;
         }
         if ($request->hasFile('news_img_phone')) {
-            $news_img_phone = Storage::putFile('news', $request->news_img_phone);
+            $news_img_phone = FilesController::imgUpload($request->news_img_phone, 'news');
             $news->news_img_phone = $news_img_phone;
         }
         $news_content = nl2br($request->news_content);
@@ -67,8 +69,9 @@ class NewsController extends Controller
 
     public function delete($id) {
         $news = News::find($id);
-
-        Storage::delete(['/storage/'.$news->news_img_pc, '/storage/'.$news->news_img_phone]);
+        
+        FilesController::deleteUpload($news->news_img_pc);
+        FilesController::deleteUpload($news->news_img_phone);
         $news->delete();
         return redirect('admin/news');
     }

@@ -42,8 +42,8 @@
                 @csrf
                 <li>！網頁版建議尺寸為 1920x800 px</li>
                 <div id="web">
-                    <div class="web-box1"><img src="{{ '/storage/'.$banner->banner_img1_pc}}" alt=""></div>
-                    <div class="web-box2"><img src="{{ '/storage/'.$banner->banner_img2_pc}}" alt=""></div>
+                    <div class="web-box1"><img src="{{ $banner->banner_img1_pc}}" alt=""></div>
+                    <div class="web-box2"><img src="{{ $banner->banner_img2_pc}}" alt=""></div>
                     <label class="web-input-file1">
                         <input type="file" name="banner_img1_pc" accept="image/*" id="webinput1_area"
                             multiple="multiple">
@@ -60,8 +60,8 @@
                 </div>
                 <li>！手機版建議尺寸為 720x815 px</li>
                 <div id="phone">
-                    <div class="phone-box1"><img src="{{ '/storage/'.$banner->banner_img1_phone }}" alt=""></div>
-                    <div class="phone-box2"><img src="{{ '/storage/'.$banner->banner_img2_phone }}" alt=""></div>
+                    <div class="phone-box1"><img src="{{ $banner->banner_img1_phone }}" alt=""></div>
+                    <div class="phone-box2"><img src="{{ $banner->banner_img2_phone }}" alt=""></div>
                     <label class="phone-input-file1">
                         <input type="file" name="banner_img1_phone" accept="image/*" id="phoneinput1_area"
                             multiple="multiple">

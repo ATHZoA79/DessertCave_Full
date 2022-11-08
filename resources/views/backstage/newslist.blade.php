@@ -37,7 +37,7 @@
             <div id="content">
                 @foreach ($news as $item)
                 <div class="card">
-                    <img src="{{ '/storage/'.$item->news_img_pc }}" alt="" class="img-area">
+                    <img src="{{ $item->news_img_pc }}" alt="" class="img-area">
                     <div class="text-area">
                         <li>{{ str_replace('-', '/', substr($item->updated_at,0,10)) }}</li>
                         <p>

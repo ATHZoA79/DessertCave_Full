@@ -129,12 +129,12 @@
 				<div class="carousel__track-container">
 					<ul class="carousel__track">
 						<li class="carousel__slide current-slide">
-							<img class="carousel__image_pc" src="{{ '/storage/app/'.$banner->banner_img1_pc }}" alt="">
-							<img class="carousel__image_phone" src="{{ '/storage/app/'.$banner->banner_img1_phone }}" alt="手機">
+							<img class="carousel__image_pc" src="{{ $banner->banner_img1_pc }}" alt="">
+							<img class="carousel__image_phone" src="{{ $banner->banner_img1_phone }}" alt="手機">
 						</li>
 						<li class="carousel__slide">
-							<img class="carousel__image_pc" src="{{ '/storage/app/'.$banner->banner_img2_pc }}" alt="">
-							<img class="carousel__image_phone" src="{{ '/storage/app/'.$banner->banner_img2_phone }}" alt="">
+							<img class="carousel__image_pc" src="{{ $banner->banner_img2_pc }}" alt="">
+							<img class="carousel__image_phone" src="{{ $banner->banner_img2_phone }}" alt="">
 						</li>
 					</ul>
 				</div>
@@ -194,8 +194,8 @@
 
 
 		<div id="new" class="new-product">
-			<img class="new-product-img-pc" src="{{ "/storage/".$new_product->product_img_pc }}" alt="New Product">
-			<img class="new-product-img-phone" src="{{ "/storage/".$new_product->product_img_phone }}" alt="New Product">
+			<img class="new-product-img-pc" src="{{ $new_product->product_img_pc }}" alt="New Product">
+			<img class="new-product-img-phone" src="{{ $new_product->product_img_phone }}" alt="New Product">
 			<div class="text">
 				<div class="title">
 					<div class="inner-text">

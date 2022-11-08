@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Newproduct;
+use App\Http\Controllers\FilesController;
 
 class NewProductController extends Controller
 {
@@ -18,13 +19,13 @@ class NewProductController extends Controller
 
         $data = Newproduct::find(1);
         if ($request->hasFile('product_img_pc')) {
-            Storage::delete($data->product_img_pc);
-            $product_img_pc = Storage::putFile('product', $request->product_img_pc);
+            FilesController::deleteUpload($data->product_img_pc);
+            $product_img_pc = FilesController::imgUpload($request->product_img_pc, 'new_product');
             $data->product_img_pc = $product_img_pc;
         }
         if ($request->hasFile('product_img_phone')) {
-            Storage::delete($data->product_img_phone);
-            $product_img_phone = Storage::putFile('product', $request->product_img_phone);
+            FilesController::deleteUpload($data->product_img_phone);
+            $product_img_phone = FilesController::imgUpload($request->product_img_phone, 'new_product');
             $data->product_img_phone = $product_img_phone;
         }
         if ($request->product_name != null) {

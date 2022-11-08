@@ -47,15 +47,15 @@
                 </div>
                 <div class="content-down">
                     <div class="img-area">
-                        <img id="web" src="{{ '/storage/'.$product->product_img_pc }}" alt="">
+                        <img id="web" src="{{ $product->product_img_pc }}" alt="">
                         <label class="input-file">
-                            <input type="file" name="product_img_pc" id="webinput_area">
+                            <input type="file" name="product_img_pc" accept="image/*" id="webinput_area">
                             <span>瀏覽</span>
                         </label>
                         <p class="web-input-file-name"></p>
-                        <img id="phone" src="{{ '/storage/'.$product->product_img_phone }}" alt="">
+                        <img id="phone" src="{{ $product->product_img_phone }}" alt="">
                         <label class="input-file">
-                            <input type="file" name="product_img_phone" id="phoneinput_area">
+                            <input type="file" name="product_img_phone" accept="image/*" id="phoneinput_area">
                             <span>瀏覽</span>
                         </label>
                         <p class="phone-input-file-name"></p>

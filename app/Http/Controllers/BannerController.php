@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Banner;
+use App\Http\Controllers\FilesController;
 use Illuminate\Validation\Rules\Exists;
 
 class BannerController extends Controller
@@ -22,23 +23,23 @@ class BannerController extends Controller
 
         $data = Banner::find(1);
         if ($request->hasFile('banner_img1_pc')) {
-            Storage::delete($data->banner_img1_pc);
-            $banner_img1_pc = Storage::putFile('/public/banner', $request->banner_img1_pc);
+            FilesController::deleteUpload($request->banner_img1_pc);
+            $banner_img1_pc = FilesController::imgUpload($request->banner_img1_pc, 'banner');
             $data->banner_img1_pc = $banner_img1_pc;
         }
         if ($request->banner_img1_phone != null) {
-            Storage::delete($data->banner_img1_phone);
-            $banner_img1_phone = Storage::putFile('/public/banner', $request->banner_img1_phone);
+            FilesController::deleteUpload($request->banner_img1_phone);
+            $banner_img1_phone = FilesController::imgUpload($request->banner_img1_phone, 'banner');
             $data->banner_img1_phone = $banner_img1_phone;
         }
         if ($request->banner_img2_pc != null) {
-            Storage::delete($data->banner_img2_pc);
-            $banner_img2_pc = Storage::putFile('/public/banner', $request->banner_img2_pc);
+            FilesController::deleteUpload($request->banner_img2_pc);
+            $banner_img2_pc = FilesController::imgUpload($request->banner_img2_pc, 'banner');
             $data->banner_img2_pc = $banner_img2_pc;
         }
         if ($request->banner_img2_phone != null) {
-            Storage::delete($data->banner_img2_phone);
-            $banner_img2_phone = Storage::putFile('/public/banner', $request->banner_img2_phone);
+            FilesController::deleteUpload($request->banner_img2_phone);
+            $banner_img2_phone = FilesController::imgUpload($request->banner_img2_phone, 'banner');
             $data->banner_img2_phone = $banner_img2_phone;
         }
         $data->save();

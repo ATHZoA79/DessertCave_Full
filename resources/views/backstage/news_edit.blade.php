@@ -51,18 +51,18 @@
                 <div class="content-right">
                     <li>上傳列表圖 <span>*</span></li>
                     <div id="web">
-                        <img src="{{ '/storage/'.$news->news_img_pc }}" alt="當前電腦版圖片" class="box">
+                        <img src="{{ $news->news_img_pc }}" alt="當前電腦版圖片" class="box">
                         <label class="input-file">
-                            <input type="file" name="news_img_pc" id="webinput_area">
+                            <input type="file" name="news_img_pc" accept="image/*" id="webinput_area">
                             <span>瀏覽</span>
                         </label>
                         <p class="web-input-file-name"></p>
                     </div>
                     <li>！網頁版建議尺寸為 535x402 px</li>
                     <div id="phone">
-                        <img src="{{ '/storage/'.$news->news_img_phone }}" alt="當前手機板圖片" class="box">
+                        <img src="{{ $news->news_img_phone }}" alt="當前手機板圖片" class="box">
                         <label class="input-file">
-                            <input type="file" name="news_img_phone" id="phoneinput_area">
+                            <input type="file" name="news_img_phone" accept="image/*" id="phoneinput_area">
                             <span>瀏覽</span>
                         </label>
                         <p class="phone-input-file-name"></p>

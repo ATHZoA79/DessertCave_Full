@@ -18,8 +18,8 @@
     <div class="subtitle">{{ $news_detail->start_date }} - {{ $news_detail->end_date }}</div>
   </div>
   <div class="news-banner">
-    <img class="img-pc" src="{{ './storage/'.$news_detail->news_img_pc }}">
-    <img class="img-phone" src="{{ './storage/'.$news_detail->news_img_phone }}">
+    <img class="img-pc" src="{{ $news_detail->news_img_pc }}">
+    <img class="img-phone" src="{{ $news_detail->news_img_phone }}">
   </div>
   <ul class="news-content">
     <li class="new-text-content">
