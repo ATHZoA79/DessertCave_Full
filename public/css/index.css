@@ -250,6 +250,8 @@ main .product-showcase .see-through-style .mask {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  opacity: 1;
+  transition: 0.2s;
   z-index: 5;
 }
 main .product-showcase .see-through-style img {
@@ -260,10 +262,10 @@ main .product-showcase .see-through-style:hover {
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: linear;
-  transform: scale(1.5);
+  /* transform: scale(1.5); */
 }
 main .product-showcase .see-through-style:hover .mask {
-  display: none;
+  opacity: 0;
 }
 @media screen and (max-width: 720px) {
   main .product-showcase .see-through-style {
