@@ -35,8 +35,8 @@
       </ul>
     </div>
     <div class="news-img">
-      <img class="img-pc" src="{{ '/storage/'.$item->news_img_pc }}">
-      <img class="img-phone" src="{{ '/storage/'.$item->news_img_phone }}">
+      <img class="img-pc" src="{{ './storage/'.$item->news_img_pc }}">
+      <img class="img-phone" src="{{ './storage/'.$item->news_img_phone }}">
       <ul class="news-img-date">{{ $news_date[$key] }}</ul>
     </div>
   </div>
