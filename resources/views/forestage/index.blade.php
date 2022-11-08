@@ -133,8 +133,8 @@
 							<img class="carousel__image_phone" src="{{ '/storage/app/'.$banner->banner_img1_phone }}" alt="手機">
 						</li>
 						<li class="carousel__slide">
-							<img class="carousel__image_pc" src="{{ './storage/'.$banner->banner_img2_pc }}" alt="">
-							<img class="carousel__image_phone" src="{{ './storage/'.$banner->banner_img2_phone }}" alt="">
+							<img class="carousel__image_pc" src="{{ '/storage/app/'.$banner->banner_img2_pc }}" alt="">
+							<img class="carousel__image_phone" src="{{ '/storage/app/'.$banner->banner_img2_phone }}" alt="">
 						</li>
 					</ul>
 				</div>
