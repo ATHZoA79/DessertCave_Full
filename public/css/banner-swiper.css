@@ -11,14 +11,14 @@
   position: relative;
 }
 
-.carousel__image_pc {
+.carousel__track-container .carousel__track .carousel__slide .carousel__image_pc {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.carousel__image_phone {
+.carousel__track-container .carousel__track .carousel__slide .carousel__image_phone {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -27,11 +27,11 @@
 }
 
 @media screen and (max-width:720px) {
-  .carousel__image_pc {
+  .carousel__track-container .carousel__track .carousel__slide .carousel__image_pc {
     display: none;
   }
 
-  .carousel__image_phone {
+  .carousel__track-container .carousel__track .carousel__slide .carousel__image_phone {
     display: block;
   }
 }
