@@ -1,6 +1,7 @@
 @extends('template.nav&footer')
 
 @section('head')
+<title>活動快訊</title>
 <link rel="stylesheet" href="{{asset('css/nav&footer.css')}}">
 <link rel="stylesheet" href="{{asset('css/news.css')}}">
 <link rel="stylesheet" href="{{asset('css/toTop.css')}}">

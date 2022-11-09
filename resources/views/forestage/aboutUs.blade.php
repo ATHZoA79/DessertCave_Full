@@ -1,6 +1,7 @@
 @extends('template.nav&footer')
 
 @section('head')
+<title>品牌故事</title>
 <link rel="stylesheet" href="./css/nav&footer.css">
 <link rel="stylesheet" href="./css/about.css">
 <link rel="stylesheet" href="./css/toTop.css">
