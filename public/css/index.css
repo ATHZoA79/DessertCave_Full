@@ -262,7 +262,7 @@ main .product-showcase .see-through-style:hover {
   transition-duration: 0.3s;
   transition-delay: 0s;
   transition-timing-function: linear;
-  /* transform: scale(1.5); */
+  transform: scale(1.25);
 }
 main .product-showcase .see-through-style:hover .mask {
   opacity: 0;
@@ -788,7 +788,7 @@ main .product-series .swiper-area .swiper .swiper-wrapper .swiper-slide .swiper-
   letter-spacing: 0.2rem;
 }
 main .product-series .swiper-area .swiper .swiper-pagination {
-  display: none !important;
+  display: none ;
 }
 @media screen and (max-width: 720px) {
   main .product-series .swiper-area .swiper .swiper-pagination {
