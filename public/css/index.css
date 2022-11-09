@@ -714,7 +714,7 @@ main .product-series .marquee-area .marquee-text {
   font-family: none;
   color: black;
   animation-name: marquee;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   width: 650px;
