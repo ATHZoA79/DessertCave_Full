@@ -286,8 +286,8 @@
 	</footer>
 
 	<div id="loading">
-		<img id="img_bg" src="./img/index/loading_bg.png" alt="" class="">
-		<img id="img_logo_done" src="./img/index/logo-green.png" alt="" class="">
+		<img id="img_bg" src="./img/index/load/loading_bg.png" alt="" class="">
+		<img id="img_logo_done" src="./img/index/load/logo-green.png" alt="" class="">
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
