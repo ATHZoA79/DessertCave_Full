@@ -63,7 +63,7 @@ header nav .nav-logo {
   align-items: center;
   height: 102px;
   width: 102px;
-  background-image: url("../img/NAV/Logo/logo-bg-white.png");
+  background-image: url("../img/logo-bg-white.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -154,7 +154,7 @@ header nav .social-media-area .social-style {
 header nav .social-media-area #facebook {
   width: 30px;
   height: 30px;
-  background-image: url("../img/NAV/社群/FB.png");
+  background-image: url("../img/index/FB.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -167,7 +167,7 @@ header nav .social-media-area #facebook:hover {
 header nav .social-media-area #instagram {
   width: 28px;
   height: 28px;
-  background-image: url("../img/NAV/社群/IG.png");
+  background-image: url("../img/index/IG.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
