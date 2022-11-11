@@ -218,23 +218,23 @@
 				<div class="swiper mySwiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<div class="swiper-product-img"><img src="./img/index/fruit-1.png" alt="">
+							<div class="swiper-product-img"><img src="./img/index/series/fruit-1.png" alt="">
 							</div>
 							<div class="swiper-product-name">菓洞鮮果系列</div>
 						</div>
 						<div class="swiper-slide">
-							<div class="swiper-product-img"><img src="./img/index/nut-2.png" alt="">
+							<div class="swiper-product-img"><img src="./img/index/series/nut-2.png" alt="">
 							</div>
 							<div class="swiper-product-name">綜合堅果系列</div>
 						</div>
 						<div class="swiper-slide">
-							<div class="swiper-product-img"><img src="./img/index/matcha-3.png" alt="">
+							<div class="swiper-product-img"><img src="./img/index/series/matcha-3.png" alt="">
 							</div>
 							<div class="swiper-product-name">濃郁抹茶系列</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="swiper-product-img">
-								<img src="./img/index/chocolate-4.png" alt="">
+								<img src="./img/index/series/chocolate-4.png" alt="">
 								<a href="{{ route('product')}}" class="more-product">查看更多</a>
 							</div>
 						</div>
