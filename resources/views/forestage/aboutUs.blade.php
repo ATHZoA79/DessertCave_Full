@@ -28,7 +28,7 @@
 </div>
 
 <div class="banner-area">
-  <img src="./img/store.jpg">
+  <img src="./img/about/shop.jpg">
 </div>
 
 <div class="slogan-area">
