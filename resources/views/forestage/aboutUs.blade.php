@@ -60,7 +60,7 @@
       </ul>
     </div>
     <div class="vl"></div>
-    <div class="cordon-graduate"><img src="./img/藍帶畢業證書-截圖.jpg"></div>
+    <div class="cordon-graduate"><img src="./img/about/cirtification.png"></div>
   </div>
   <div class="brand-area">
     <div class="brand-picture"><img src="./img/about/story.png" alt=""></div>
