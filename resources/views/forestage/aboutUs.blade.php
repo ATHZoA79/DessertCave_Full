@@ -63,7 +63,7 @@
     <div class="cordon-graduate"><img src="./img/藍帶畢業證書-截圖.jpg"></div>
   </div>
   <div class="brand-area">
-    <div class="brand-picture"><img src="./img/about_us_2.png" alt=""></div>
+    <div class="brand-picture"><img src="./img/about/story.png" alt=""></div>
     <div class="vl"></div>
     <div class="brand-story">
       <ul>
