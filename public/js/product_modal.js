@@ -177,7 +177,7 @@ var product_card = document.querySelectorAll(".product-card");
 			let t_series, t_item; 
 			for (series in Object.keys(product)) {
 				for (item in Object.keys(series)) {
-					if (item.name_zh === card.querySelector(".product-name>h3").innerText) {
+					if (Object.values(item)[0] === card.querySelector(".product-name>h3").innerText) {
 						t_item = item;
 						t_series = series;
 						break;
