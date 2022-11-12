@@ -174,11 +174,13 @@ var product_card = document.querySelectorAll(".product-card");
   product_card.forEach((card) => {
     card.addEventListener("click", function show_detail() {
       product_detail.classList.toggle("block-display");
-			let t_series, t_item; 
-			for (series in Object.keys(product)) {
-				for (item in Object.keys(series)) {
-					if (Object.values(item)[0] === card.querySelector(".product-name>h3").innerText) {
-						t_item = item;
+			let t_series, t_item, series_key, item_key; 
+			for (series in product) {
+				for (item in product[series]) {
+					if (product[series][item].name_zh === card.querySelector(".product-name>h3").innerText) {
+						item_key = item;
+						t_item = product[series][item];
+						series_key = series;
 						t_series = series;
 						break;
 					}
@@ -189,15 +191,13 @@ var product_card = document.querySelectorAll(".product-card");
                     <div class="product-detail-card-container">
                       <div class="product-detail-card">
                         <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
-                        <div class="product-detail-img"><img src="./img/product/${t_series}/${
-                          t_item
-                        }-detail-phone.png" alt=""></div>
+                        <div class="product-detail-img"><img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt=""></div>
                         <div class="product-detail-text">
                           <div class="product-detail-name">${
-                            Object.values(t_item)[0]
+                            t_item.name_zh
                           }</div>
                           <div class="product-detail-content">${
-                            Object.values(t_item)[1]
+                            t_item.content
                           }</div>
                         </div>
                     `;
