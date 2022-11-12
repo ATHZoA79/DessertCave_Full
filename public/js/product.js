@@ -1198,11 +1198,9 @@ if (screen.width < 430) {
 }
 
 //--function
-function close_detail(target) {
-  let el = document.querySelector(target);
-  el.addEventListener("click", () => {
-    product_detail.classList.toggle("block-display");
-  });
+function close_detail(t) {
+  let ele = document.querySelector(t);
+  ele.addEventListener("click", () => product_detail.classList.toggle("block-display"));
 }
 
 //--End of function
