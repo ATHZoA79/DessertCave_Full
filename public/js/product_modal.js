@@ -179,7 +179,7 @@ product_card.forEach((card) => {
     // Create modal for default cards
     card.addEventListener("click", function show_detail() {
         product_detail.classList.toggle("block-display");
-				// Search product object by product name
+        // Search product object by product name
         let t_series, t_item, series_key, item_key;
         for (series in product) {
             for (item in product[series]) {
@@ -200,10 +200,19 @@ product_card.forEach((card) => {
                     <div class="product-detail-card-container">
                       <div class="product-detail-card">
                         <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
-                        <div class="product-detail-img"><img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt=""></div>
+													<div class="product-detail-img">${
+                                                        screen.width > 430
+                                                            ? `<img src="./img/product/${series_key}/${item_key}-detail.png" alt="">`
+                                                            : `<img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt="">`
+                                                    }
+													</div>
                         <div class="product-detail-text">
-                          <div class="product-detail-name">${t_item.name_zh}</div>
-                          <div class="product-detail-content">${t_item.content}</div>
+                          <div class="product-detail-name">${
+                              t_item.name_zh
+                          }</div>
+                          <div class="product-detail-content">${
+                              t_item.content
+                          }</div>
                         </div>
                     `;
 
