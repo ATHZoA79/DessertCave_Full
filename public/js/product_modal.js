@@ -194,10 +194,10 @@ var product_card = document.querySelectorAll(".product-card");
                         }-detail-phone.png" alt=""></div>
                         <div class="product-detail-text">
                           <div class="product-detail-name">${
-                            t_item.name_zh
+                            Object.values(t_item)[0]
                           }</div>
                           <div class="product-detail-content">${
-                            t_item.content
+                            Object.values(t_item)[1]
                           }</div>
                         </div>
                     `;
