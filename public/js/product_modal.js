@@ -126,10 +126,10 @@ function showProductCards(series, item) {
 							<div class="product-card">
 								<div class="img-container">
 								${
-										screen.width > 430
-												? `<img src="./img/product/${series}/${key}.png" data-product="${key}" alt="空產品">`
-												: `<img src="./img/product/${series}/${key}-phone.png" data-product="${key}" alt="空產品">`
-								}
+                                    screen.width > 430
+                                        ? `<img src="./img/product/${series}/${key}.png" data-product="${key}" alt="空產品">`
+                                        : `<img src="./img/product/${series}/${key}-phone.png" data-product="${key}" alt="空產品">`
+                                }
                   </div>
 								<div class="product-name">
 										<h3>${item[key].name_zh}</h3>
@@ -142,15 +142,19 @@ function createProductDetail(series, item) {
     var product_card = document.querySelectorAll(".product-card");
     product_card.forEach((value, index) => {
         value.addEventListener("click", function show_detail() {
-					product_detail.classList.toggle("block-display");
+            product_detail.classList.toggle("block-display");
             product_detail_img.innerHTML =
                 screen.width > 430
                     ? `<img src="./img/product/${series}/${
                           Object.keys(item)[index]
-                      }-detail.png" data-product="${Object.keys(item)[index]}" alt=""></div>`
+                      }-detail.png" data-product="${
+                          Object.keys(item)[index]
+                      }" alt=""></div>`
                     : `<img src="./img/product/${series}/${
                           Object.keys(item)[index]
-                      }-detail-phone.png" data-product="${Object.keys(item)[index]}" alt=""></div>`;
+                      }-detail-phone.png" data-product="${
+                          Object.keys(item)[index]
+                      }" alt=""></div>`;
             product_detail_name.innerHTML = Object.values(item)[index].name_zh;
             product_detail_content.innerHTML =
                 Object.values(item)[index].content;
@@ -171,45 +175,49 @@ function close_detail() {
 
 // Main
 var product_card = document.querySelectorAll(".product-card");
-  product_card.forEach((card) => {
+product_card.forEach((card) => {
+    // Create modal for default cards
     card.addEventListener("click", function show_detail() {
-      product_detail.classList.toggle("block-display");
-			let t_series, t_item, series_key, item_key; 
-			for (series in product) {
-				for (item in product[series]) {
-					if (product[series][item].name_zh === card.querySelector(".product-name>h3").innerText) {
-						item_key = item;
-						t_item = product[series][item];
-						series_key = series;
-						t_series = series;
-						break;
-					}
-				}
-			}
-      product_detail.innerHTML = `
+        product_detail.classList.toggle("block-display");
+				// Search product object by product name
+        let t_series, t_item, series_key, item_key;
+        for (series in product) {
+            for (item in product[series]) {
+                if (
+                    product[series][item].name_zh ===
+                    card.querySelector(".product-name>h3").innerText
+                ) {
+                    item_key = item;
+                    t_item = product[series][item];
+                    series_key = series;
+                    t_series = series;
+                    break;
+                }
+            }
+        }
+        product_detail.innerHTML = `
                     <div class="product-detail-opacity"></div>
                     <div class="product-detail-card-container">
                       <div class="product-detail-card">
                         <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
                         <div class="product-detail-img"><img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt=""></div>
                         <div class="product-detail-text">
-                          <div class="product-detail-name">${
-                            t_item.name_zh
-                          }</div>
-                          <div class="product-detail-content">${
-                            t_item.content
-                          }</div>
+                          <div class="product-detail-name">${t_item.name_zh}</div>
+                          <div class="product-detail-content">${t_item.content}</div>
                         </div>
                     `;
-        
-                    document.querySelector(".product-detail-close").addEventListener("click", close_detail);
-                    document.querySelector(".product-detail-opacity").addEventListener("click", close_detail);
+
+        document
+            .querySelector(".product-detail-close")
+            .addEventListener("click", close_detail);
+        document
+            .querySelector(".product-detail-opacity")
+            .addEventListener("click", close_detail);
     });
-  });
+});
 
 product_sheet.forEach((sheet) => {
     sheet.addEventListener("click", function () {
-        //--product sheet color
         product_sheet.forEach((element) => {
             element.classList.remove("bg-pink");
         });
