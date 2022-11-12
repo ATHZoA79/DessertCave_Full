@@ -126,11 +126,10 @@ function showProductCards(series, item) {
             `
 							<div class="product-card">
 								<div class="img-container">
-								` +
-            (screen.width > 430)
-                ? `<img src="./img/product/${series}/${key}.png" alt="空產品">`
-                : `<img src="./img/product/${series}/${key}-phone.png" alt="空產品">` +
-                  `</div>
+								${(screen.width > 430)
+									? `<img src="./img/product/${series}/${key}.png" alt="空產品">`
+									: `<img src="./img/product/${series}/${key}-phone.png" alt="空產品">`}
+                  </div>
 								<div class="product-name">
 										<h3>${item[key].name_zh}</h3>
 								</div>
