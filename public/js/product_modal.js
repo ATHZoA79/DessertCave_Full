@@ -144,10 +144,10 @@ function createProductDetail(series, item) {
             product_detail_img.innerHTML =
                 screen.width > 430
                     ? `<img src="./img/product/${series}/${
-                          Object.keys(Object.values(item))[index]
+                          Object.keys(Object.values(item))
                       }-detail.png" alt=""></div>`
                     : `<img src="./img/product/${series}/${
-                          Object.keys(Object.values(item))[index]
+                          Object.keys(Object.values(item))
                       }-detail-phone.png" alt=""></div>`;
             product_detail_name.innerHTML = Object.values(item)[index].name_zh;
             product_detail_content.innerHTML =
