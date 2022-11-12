@@ -146,6 +146,7 @@ main .product-card-area .product-card .product-name h3 {
   main .product-card-area .product-card {
     width: 165px;
     height: auto;
+    margin: 0px calc((100% - 165px) / 2) 0px ;
   }
   main .product-card-area .product-card .img-container {
     width: auto;
