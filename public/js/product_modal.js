@@ -142,6 +142,7 @@ function createProductDetail(series, item) {
     var product_card = document.querySelectorAll(".product-card");
     product_card.forEach((value, index) => {
         value.addEventListener("click", function show_detail() {
+					product_detail.classList.toggle("block-display");
             product_detail_img.innerHTML =
                 screen.width > 430
                     ? `<img src="./img/product/${series}/${
