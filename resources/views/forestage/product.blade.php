@@ -61,7 +61,7 @@
 <div class="product-card-area">
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/product_list/chocolate/fafna2.png" data-product="fafna2" alt="">
+      <img src="./img/product/chocolate/fafna2.png" data-product="fafna2" alt="">
     </div>
     <div class="product-name">
       <h3>橙香法芙娜生巧塔</h3>
@@ -69,7 +69,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/product_list/sesame.png" data-product="sesame" alt="">
+      <img src="./img/product/sesame.png" data-product="sesame" alt="">
     </div>
     <div class="product-name">
       <h3>Sesame Sesame</h3>
@@ -77,7 +77,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/product_list/furit/grapelemon.png" data-product="grapelemon" alt="">
+      <img src="./img/product/furit/grapelemon.png" data-product="grapelemon" alt="">
     </div>
     <div class="product-name">
       <h3>綠葡萄檸檬乳酪</h3>
@@ -85,7 +85,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/product_list/furit/lemon3.png" data-product="lemon3" alt="">
+      <img src="./img/product/furit/lemon3.png" data-product="lemon3" alt="">
     </div>
     <div class="product-name">
       <h3>義式奶油檸檬塔</h3>
@@ -93,7 +93,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/product_list/nut/honeydrupe.png" data-product="honeydrupe" alt="">
+      <img src="./img/product/nut/honeydrupe.png" data-product="honeydrupe" alt="">
     </div>
     <div class="product-name">
       <h3>蜂蜜太妃核果塔</h3>
@@ -101,7 +101,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/product_list/chocolate/hazelnut.png" data-product="hazelnut" alt="">
+      <img src="./img/product/chocolate/hazelnut.png" data-product="hazelnut" alt="">
     </div>
     <div class="product-name">
       <h3>焦糖榛果生巧克力塔</h3>

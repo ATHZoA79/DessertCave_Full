@@ -43,44 +43,37 @@ var product_detail_content = [
 
 if (screen.width < 430) {
   //--first product detail
-  var product_card = document.querySelectorAll(".product-card");
-  product_card.forEach((card) => {
-    card.addEventListener("click", function show_detail() {
-      product_detail.classList.toggle("block-display");
-      product_detail.innerHTML = `
-                    <div class="product-detail-opacity"></div>
-                    <div class="product-detail-card-container">
-                      <div class="product-detail-card">
-                        <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
-                        <div class="product-detail-img"><img src="./img/product/product_list/detail/${
-                          card.querySelector(".img-container>img").dataset
-                            .product
-                        }-detail-phone.png" alt=""></div>
-                        <div class="product-detail-text">
-                          <div class="product-detail-name">${
-                            card.querySelector(".product-name>h3").innerText
-                          }</div>
-                          <div class="product-detail-content">${
-                            product_detail_content[0][
-                              `${
-                                card.querySelector(".img-container>img").dataset
-                                  .product
-                              }`
-                            ]
-                          }</div>
-                        </div>
-                    `;
-      var product_detail_close = document.querySelector(
-        ".product-detail-close"
-      );
-      var product_detail_opacity = document.querySelector(
-        ".product-detail-opacity"
-      );
-
-      product_detail_close.addEventListener("click", close_detail);
-      product_detail_opacity.addEventListener("click", close_detail);
-    });
-  });
+  // var product_card = document.querySelectorAll(".product-card");
+  // product_card.forEach((card) => {
+  //   card.addEventListener("click", function show_detail() {
+  //     product_detail.classList.toggle("block-display");
+  //     product_detail.innerHTML = `
+  //                   <div class="product-detail-opacity"></div>
+  //                   <div class="product-detail-card-container">
+  //                     <div class="product-detail-card">
+  //                       <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
+  //                       <div class="product-detail-img"><img src="./img/product/product_list/detail/${
+  //                         card.querySelector(".img-container>img").dataset
+  //                           .product
+  //                       }-detail-phone.png" alt=""></div>
+  //                       <div class="product-detail-text">
+  //                         <div class="product-detail-name">${
+  //                           card.querySelector(".product-name>h3").innerText
+  //                         }</div>
+  //                         <div class="product-detail-content">${
+  //                           product_detail_content[0][
+  //                             `${
+  //                               card.querySelector(".img-container>img").dataset
+  //                                 .product
+  //                             }`
+  //                           ]
+  //                         }</div>
+  //                       </div>
+  //                   `;
+  //     close_detail('.product-detail-close');
+  //     close_detail('.product-detail-opacity');
+  //   });
+  // });
 
   //--End of first product detail
 
@@ -161,17 +154,17 @@ if (screen.width < 430) {
                             .product
                         }-detail-phone.png" alt=""></div>
                         <div class="product-detail-text">
-                          <div class="product-detail-name">${
-                            card.querySelector(".product-name>h3").innerText
-                          }</div>
-                          <div class="product-detail-content">${
-                            product_detail_content[0][
+                          <div class="product-detail-name">
+                          ${card.querySelector(".product-name>h3").innerText}
+                          </div>
+                          <div class="product-detail-content">
+                          ${product_detail_content[0][
                               `${
                                 card.querySelector(".img-container>img").dataset
                                   .product
                               }`
-                            ]
-                          }</div>
+                            ]}
+                          </div>
                         </div>
                     `;
             var product_detail_close = document.querySelector(
@@ -1175,7 +1168,7 @@ if (screen.width < 430) {
                     <div class="product-detail-card-container">
                       <div class="product-detail-card">
                         <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
-                        <div class="product-detail-img"><img src="./img/product/product_list/detail/${
+                        <div class="product-detail-img"><img src="./img/product//${
                           card.querySelector(".img-container>img").dataset
                             .product
                         }-detail.png" alt=""></div>
@@ -1193,15 +1186,8 @@ if (screen.width < 430) {
                           }</div>
                         </div>
                     `;
-            var product_detail_close = document.querySelector(
-              ".product-detail-close"
-            );
-            var product_detail_opacity = document.querySelector(
-              ".product-detail-opacity"
-            );
-
-            product_detail_close.addEventListener("click", close_detail);
-            product_detail_opacity.addEventListener("click", close_detail);
+            close_detail('.product-detail-close');
+            close_detail('.product-detail-opacity');
           });
         });
       }
@@ -1212,8 +1198,11 @@ if (screen.width < 430) {
 }
 
 //--function
-function close_detail() {
-  product_detail.classList.toggle("block-display");
+function close_detail(_target) {
+  el = document.querySelector(_target);
+  el.addEventListener("click", () => {
+    product_detail.classList.toggle("block-display");
+  });
 }
 
 //--End of function
