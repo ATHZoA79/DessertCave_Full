@@ -70,8 +70,9 @@ if (screen.width < 430) {
                           }</div>
                         </div>
                     `;
-      close_detail('.product-detail-close');
-      close_detail('.product-detail-opacity');
+        
+                    document.querySelector(".product-detail-close").addEventListener("click", close_detail);
+                    document.querySelector(".product-detail-opacity").addEventListener("click", close_detail);
     });
   });
 
