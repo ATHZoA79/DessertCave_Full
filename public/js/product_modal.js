@@ -122,13 +122,14 @@ function showProductCards(series, item) {
     // Generate product cards
     product_card_area.innerHTML = "";
     for (key in item) {
-        product_card_area.innerHTML +=
-            `
+        product_card_area.innerHTML += `
 							<div class="product-card">
 								<div class="img-container">
-								${(screen.width > 430)
-									? `<img src="./img/product/${series}/${key}.png" alt="空產品">`
-									: `<img src="./img/product/${series}/${key}-phone.png" alt="空產品">`}
+								${
+										screen.width > 430
+												? `<img src="./img/product/${series}/${key}.png" alt="空產品">`
+												: `<img src="./img/product/${series}/${key}-phone.png" alt="空產品">`
+								}
                   </div>
 								<div class="product-name">
 										<h3>${item[key].name_zh}</h3>
@@ -144,10 +145,10 @@ function createProductDetail(series, item) {
             product_detail_img.innerHTML =
                 screen.width > 430
                     ? `<img src="./img/product/${series}/${
-                          Object.keys(Object.values(item))
+                          Object.keys(item)[index]
                       }-detail.png" alt=""></div>`
                     : `<img src="./img/product/${series}/${
-                          Object.keys(Object.values(item))
+                          Object.keys(item)[index]
                       }-detail-phone.png" alt=""></div>`;
             product_detail_name.innerHTML = Object.values(item)[index].name_zh;
             product_detail_content.innerHTML =
