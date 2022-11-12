@@ -93,7 +93,7 @@ main .product-sheet-area .product-series {
 main .product-card-area {
   width: 1000px;
   height: auto;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr 1fr;
   /* display: flex;
   justify-content: flex-start;
   align-items: space-between; */
