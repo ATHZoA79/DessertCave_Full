@@ -127,8 +127,8 @@ function showProductCards(series, item) {
 								<div class="img-container">
 								${
 										screen.width > 430
-												? `<img src="./img/product/${series}/${key}.png" alt="空產品">`
-												: `<img src="./img/product/${series}/${key}-phone.png" alt="空產品">`
+												? `<img src="./img/product/${series}/${key}.png" data-product="${key}" alt="空產品">`
+												: `<img src="./img/product/${series}/${key}-phone.png" data-product="${key}" alt="空產品">`
 								}
                   </div>
 								<div class="product-name">
@@ -147,10 +147,10 @@ function createProductDetail(series, item) {
                 screen.width > 430
                     ? `<img src="./img/product/${series}/${
                           Object.keys(item)[index]
-                      }-detail.png" alt=""></div>`
+                      }-detail.png" data-product="${Object.keys(item)[index]}" alt=""></div>`
                     : `<img src="./img/product/${series}/${
                           Object.keys(item)[index]
-                      }-detail-phone.png" alt=""></div>`;
+                      }-detail-phone.png" data-product="${Object.keys(item)[index]}" alt=""></div>`;
             product_detail_name.innerHTML = Object.values(item)[index].name_zh;
             product_detail_content.innerHTML =
                 Object.values(item)[index].content;
@@ -170,6 +170,39 @@ function close_detail() {
 }
 
 // Main
+var product_card = document.querySelectorAll(".product-card");
+  product_card.forEach((card) => {
+    card.addEventListener("click", function show_detail() {
+      product_detail.classList.toggle("block-display");
+      product_detail.innerHTML = `
+                    <div class="product-detail-opacity"></div>
+                    <div class="product-detail-card-container">
+                      <div class="product-detail-card">
+                        <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
+                        <div class="product-detail-img"><img src="./img/product/product_list/detail/${
+                          card.querySelector(".img-container>img").dataset
+                            .product
+                        }-detail-phone.png" alt=""></div>
+                        <div class="product-detail-text">
+                          <div class="product-detail-name">${
+                            card.querySelector(".product-name>h3").innerText
+                          }</div>
+                          <div class="product-detail-content">${
+                            product_detail_content[0][
+                              `${
+                                card.querySelector(".img-container>img").dataset
+                                  .product
+                              }`
+                            ]
+                          }</div>
+                        </div>
+                    `;
+        
+                    document.querySelector(".product-detail-close").addEventListener("click", close_detail);
+                    document.querySelector(".product-detail-opacity").addEventListener("click", close_detail);
+    });
+  });
+
 product_sheet.forEach((sheet) => {
     sheet.addEventListener("click", function () {
         //--product sheet color
