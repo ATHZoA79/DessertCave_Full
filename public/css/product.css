@@ -93,16 +93,16 @@ main .product-sheet-area .product-series {
 main .product-card-area {
   width: 1000px;
   height: auto;
-  grid-template-rows: 1fr 1fr;
-  /* display: flex;
+  display: flex;
   justify-content: flex-start;
-  align-items: space-between; */
-  /* flex-wrap: wrap; */
+  align-items: space-between;
+  flex-wrap: wrap;
   margin: auto;
 }
 main .product-card-area .product-card {
   width: 275px;
   height: auto;
+  margin-right: 20px;
 }
 main .product-card-area .product-card:hover .img-container {
   transition-duration: 0.5s;
