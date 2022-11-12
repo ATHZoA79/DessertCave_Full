@@ -12,7 +12,7 @@ const product_detail_content = document.querySelector(
 );
 
 // Product Datas
-var product = {
+var product = [
     // Structure
     // series: {
     // 	item1: {},
@@ -115,7 +115,7 @@ var product = {
                 "!!本蛋糕有添加些許黑醋栗香甜酒!! <br> 嚴選 70.5 %比利時巧克力製成慕斯及卡士達醬，搭配鬆軟海綿蛋糕，內層以榛果巧克力脆片增加層次感，口感豐富。",
         },
     },
-};
+	];
 // End of Product Datas
 
 function showProductCards(series, item) {
@@ -174,26 +174,25 @@ var product_card = document.querySelectorAll(".product-card");
   product_card.forEach((card) => {
     card.addEventListener("click", function show_detail() {
       product_detail.classList.toggle("block-display");
+			let [t_series, t_item] = product.find((series) => {
+				for (item in series) {
+					if (item.name_zh === card.querySelector(".product-name>h3").innerText) return [series, item];
+				}
+			});
       product_detail.innerHTML = `
                     <div class="product-detail-opacity"></div>
                     <div class="product-detail-card-container">
                       <div class="product-detail-card">
                         <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
-                        <div class="product-detail-img"><img src="./img/product/product_list/detail/${
-                          card.querySelector(".img-container>img").dataset
-                            .product
+                        <div class="product-detail-img"><img src="./img/product/${t_series}/${
+                          t_item
                         }-detail-phone.png" alt=""></div>
                         <div class="product-detail-text">
                           <div class="product-detail-name">${
-                            card.querySelector(".product-name>h3").innerText
+                            t_item.name_zh
                           }</div>
                           <div class="product-detail-content">${
-                            product_detail_content[0][
-                              `${
-                                card.querySelector(".img-container>img").dataset
-                                  .product
-                              }`
-                            ]
+                            t_item.content
                           }</div>
                         </div>
                     `;
