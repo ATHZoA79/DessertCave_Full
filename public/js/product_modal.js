@@ -175,8 +175,8 @@ var product_card = document.querySelectorAll(".product-card");
     card.addEventListener("click", function show_detail() {
       product_detail.classList.toggle("block-display");
 			let t_series, t_item; 
-			for (const series in product) {
-				for (const item in series) {
+			for (series in Object.keys(product)) {
+				for (item in Object.keys(series)) {
 					if (item.name_zh === card.querySelector(".product-name>h3").innerText) {
 						t_item = item;
 						t_series = series;
