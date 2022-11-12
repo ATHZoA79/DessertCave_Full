@@ -12,7 +12,7 @@ const product_detail_content = document.querySelector(
 );
 
 // Product Datas
-var product = [
+var product = {
     // Structure
     // series: {
     // 	item1: {},
@@ -115,7 +115,7 @@ var product = [
                 "!!本蛋糕有添加些許黑醋栗香甜酒!! <br> 嚴選 70.5 %比利時巧克力製成慕斯及卡士達醬，搭配鬆軟海綿蛋糕，內層以榛果巧克力脆片增加層次感，口感豐富。",
         },
     },
-	];
+};
 // End of Product Datas
 
 function showProductCards(series, item) {
