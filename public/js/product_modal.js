@@ -174,11 +174,16 @@ var product_card = document.querySelectorAll(".product-card");
   product_card.forEach((card) => {
     card.addEventListener("click", function show_detail() {
       product_detail.classList.toggle("block-display");
-			let [t_series, t_item] = product.find((series) => {
-				for (item in series) {
-					if (item.name_zh === card.querySelector(".product-name>h3").innerText) return [series, item];
+			let t_series, t_item; 
+			for (const series in product) {
+				for (const item in series) {
+					if (item.name_zh === card.querySelector(".product-name>h3").innerText) {
+						t_item = item;
+						t_series = series;
+						break;
+					}
 				}
-			});
+			}
       product_detail.innerHTML = `
                     <div class="product-detail-opacity"></div>
                     <div class="product-detail-card-container">
