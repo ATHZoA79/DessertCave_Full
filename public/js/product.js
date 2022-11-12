@@ -1198,8 +1198,8 @@ if (screen.width < 430) {
 }
 
 //--function
-function close_detail(_target) {
-  let el = document.querySelector(_target);
+function close_detail(target) {
+  let el = document.querySelector(target);
   el.addEventListener("click", () => {
     product_detail.classList.toggle("block-display");
   });
