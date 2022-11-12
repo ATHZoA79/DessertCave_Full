@@ -93,10 +93,11 @@ main .product-sheet-area .product-series {
 main .product-card-area {
   width: 1000px;
   height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: space-between;
-  flex-wrap: wrap;
+  grid-template-rows: auto;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: space-between; */
+  /* flex-wrap: wrap; */
   margin: auto;
 }
 main .product-card-area .product-card {
