@@ -120,6 +120,7 @@ var product = {
 
 function showProductCards(series, item) {
     // Generate product cards
+    product_card_area.innerHTML = "";
     for (key in item) {
         product_card_area.innerHTML +=
             `
@@ -167,32 +168,32 @@ function close_detail() {
     product_detail.classList.toggle("block-display");
 }
 
-// Main 
+// Main
 product_sheet.forEach((sheet) => {
-	sheet.addEventListener("click", function () {
-		//--product sheet color
-		product_sheet.forEach((element) => {
-			element.classList.remove("bg-pink");
-		});
-		sheet.classList.add("bg-pink");
-		if (product_sheet[0].classList.contains("bg-pink")) {
-			showProductCards("chocolate", product.chocolate);
-			createProductDetail("chocolate", product.chocolate);
-		}else if(product_sheet[1].classList.contains("bg-pink")) {
-			showProductCards("nut", product.nut);
-			createProductDetail("nut", product.nut);
-		}else if(product_sheet[2].classList.contains("bg-pink")) {
-			showProductCards("matcha", product.matcha);
-			createProductDetail("matcha", product.matcha);
-		}else if(product_sheet[3].classList.contains("bg-pink")) {
-			showProductCards("fruit", product.fruit);
-			createProductDetail("fruit", product.fruit);
-		}else if(product_sheet[4].classList.contains("bg-pink")) {
-			showProductCards("room_temp", product.room_temp);
-			createProductDetail("room_temp", product.room_temp);
-		}else {
-			showProductCards("others", product.others);
-			createProductDetail("others", product.others);
-		}
-	});
+    sheet.addEventListener("click", function () {
+        //--product sheet color
+        product_sheet.forEach((element) => {
+            element.classList.remove("bg-pink");
+        });
+        sheet.classList.add("bg-pink");
+        if (product_sheet[0].classList.contains("bg-pink")) {
+            showProductCards("chocolate", product.chocolate);
+            createProductDetail("chocolate", product.chocolate);
+        } else if (product_sheet[1].classList.contains("bg-pink")) {
+            showProductCards("nut", product.nut);
+            createProductDetail("nut", product.nut);
+        } else if (product_sheet[2].classList.contains("bg-pink")) {
+            showProductCards("matcha", product.matcha);
+            createProductDetail("matcha", product.matcha);
+        } else if (product_sheet[3].classList.contains("bg-pink")) {
+            showProductCards("fruit", product.fruit);
+            createProductDetail("fruit", product.fruit);
+        } else if (product_sheet[4].classList.contains("bg-pink")) {
+            showProductCards("room_temp", product.room_temp);
+            createProductDetail("room_temp", product.room_temp);
+        } else {
+            showProductCards("others", product.others);
+            createProductDetail("others", product.others);
+        }
+    });
 });
