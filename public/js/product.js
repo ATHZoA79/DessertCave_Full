@@ -1199,8 +1199,8 @@ if (screen.width < 430) {
 }
 
 //--function
-function close_detail(t) {
-  document.querySelector(t).addEventListener("click", () => product_detail.classList.toggle("block-display"));
+function close_detail() {
+  product_detail.classList.toggle("block-display");
 }
 
 //--End of function
