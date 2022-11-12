@@ -128,6 +128,6 @@
 @endsection
 
 @section('scripts')
-<script src="./js/product.js"></script>
+<script src="./js/product_modal.js"></script>
 <script src="./js/toTop.js"></script>
 @endsection
