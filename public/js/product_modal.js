@@ -206,22 +206,22 @@ product_sheet.forEach((sheet) => {
         sheet.classList.add("bg-pink");
         if (product_sheet[0].classList.contains("bg-pink")) {
             showProductCards("chocolate", product.chocolate);
-            createProductDetail("chocolate", product.chocolate);
+            createProductDetail();
         } else if (product_sheet[1].classList.contains("bg-pink")) {
             showProductCards("nut", product.nut);
-            createProductDetail("nut", product.nut);
+            createProductDetail();
         } else if (product_sheet[2].classList.contains("bg-pink")) {
             showProductCards("matcha", product.matcha);
-            createProductDetail("matcha", product.matcha);
+            createProductDetail();
         } else if (product_sheet[3].classList.contains("bg-pink")) {
             showProductCards("fruit", product.fruit);
-            createProductDetail("fruit", product.fruit);
+            createProductDetail();
         } else if (product_sheet[4].classList.contains("bg-pink")) {
             showProductCards("room_temp", product.room_temp);
-            createProductDetail("room_temp", product.room_temp);
+            createProductDetail();
         } else {
             showProductCards("others", product.others);
-            createProductDetail("others", product.others);
+            createProductDetail();
         }
     });
 });
