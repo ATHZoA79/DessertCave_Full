@@ -61,7 +61,7 @@
 <div class="product-card-area">
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/chocolate/fafna2.png" data-product="fafna2" alt="">
+      <img src="./img/product/chocolate/fafna.png" data-product="fafna" alt="">
     </div>
     <div class="product-name">
       <h3>橙香法芙娜生巧塔</h3>
