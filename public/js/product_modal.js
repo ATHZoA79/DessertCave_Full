@@ -222,3 +222,4 @@ void function main() {
     }
 		main();
 };
+main();
