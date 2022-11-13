@@ -1,3 +1,4 @@
+const product_card = document.querySelectorAll(".product-card");
 const product_card_area = document.querySelector(".product-card-area");
 const product_detail = document.querySelector(".product-detail-area");
 const product_detail_close = document.querySelector(".product-detail-close");
@@ -141,7 +142,6 @@ function showProductCards(series, item) {
 }
 function createProductDetail() {
     product_card.forEach((card) => {
-        // Create modal for default cards
         card.addEventListener("click", function show_detail() {
             product_detail.classList.toggle("block-display");
             // Search product object by product name
@@ -160,26 +160,12 @@ function createProductDetail() {
                     }
                 }
             }
-            product_detail.innerHTML = `
-                    <div class="product-detail-opacity"></div>
-                    <div class="product-detail-card-container">
-                      <div class="product-detail-card">
-                        <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
-													<div class="product-detail-img">${
-                                                        screen.width > 430
-                                                            ? `<img src="./img/product/${series_key}/${item_key}-detail.png" alt="">`
-                                                            : `<img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt="">`
-                                                    }
-													</div>
-                        <div class="product-detail-text">
-                          <div class="product-detail-name">${
-                              t_item.name_zh
-                          }</div>
-                          <div class="product-detail-content">${
-                              t_item.content
-                          }</div>
-                        </div>
-                    `;
+            product_detail_img =
+                screen.width > 430
+                    ? `<img src="./img/product/${series_key}/${item_key}-detail.png" alt="">`
+                    : `<img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt="">`;
+            product_detail_name = t_item.name_zh;
+						product_detail_content = t_item.content;
 
             document
                 .querySelector(".product-detail-close")
@@ -216,7 +202,7 @@ async function setCards() {
 }
 
 // Main
-const product_card = document.querySelectorAll(".product-card");
+// Create modal for default cards
 createProductDetail();
 
 product_sheet.forEach((sheet) => {
@@ -225,6 +211,6 @@ product_sheet.forEach((sheet) => {
             element.classList.remove("bg-pink");
         });
         sheet.classList.add("bg-pink");
-				setCards();
+        setCards();
     });
 });
