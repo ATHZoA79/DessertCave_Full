@@ -193,35 +193,38 @@ function createProductDetail() {
 function close_detail() {
     product_detail.classList.toggle("block-display");
 }
+async function setCards() {
+    if (product_sheet[0].classList.contains("bg-pink")) {
+        showProductCards("chocolate", product.chocolate);
+        createProductDetail();
+    } else if (product_sheet[1].classList.contains("bg-pink")) {
+        showProductCards("nut", product.nut);
+        createProductDetail();
+    } else if (product_sheet[2].classList.contains("bg-pink")) {
+        showProductCards("matcha", product.matcha);
+        createProductDetail();
+    } else if (product_sheet[3].classList.contains("bg-pink")) {
+        showProductCards("fruit", product.fruit);
+        createProductDetail();
+    } else if (product_sheet[4].classList.contains("bg-pink")) {
+        showProductCards("room_temp", product.room_temp);
+        createProductDetail();
+    } else {
+        showProductCards("others", product.others);
+        createProductDetail();
+    }
+}
 
 // Main
 const product_card = document.querySelectorAll(".product-card");
 createProductDetail();
 
 product_sheet.forEach((sheet) => {
-		sheet.addEventListener("click", function () {
-				product_sheet.forEach((element) => {
-						element.classList.remove("bg-pink");
-				});
-				sheet.classList.add("bg-pink");
-				if (product_sheet[0].classList.contains("bg-pink")) {
-						showProductCards("chocolate", product.chocolate);
-						createProductDetail();
-				} else if (product_sheet[1].classList.contains("bg-pink")) {
-						showProductCards("nut", product.nut);
-						createProductDetail();
-				} else if (product_sheet[2].classList.contains("bg-pink")) {
-						showProductCards("matcha", product.matcha);
-						createProductDetail();
-				} else if (product_sheet[3].classList.contains("bg-pink")) {
-						showProductCards("fruit", product.fruit);
-						createProductDetail();
-				} else if (product_sheet[4].classList.contains("bg-pink")) {
-						showProductCards("room_temp", product.room_temp);
-						createProductDetail();
-				} else {
-						showProductCards("others", product.others);
-						createProductDetail();
-				}
-		});
+    sheet.addEventListener("click", function () {
+        product_sheet.forEach((element) => {
+            element.classList.remove("bg-pink");
+        });
+        sheet.classList.add("bg-pink");
+				setCards();
+    });
 });
