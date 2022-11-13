@@ -182,22 +182,22 @@ function close_detail() {
 async function setCards() {
     if (product_sheet[0].classList.contains("bg-pink")) {
         showProductCards("chocolate", product.chocolate);
-        createProductDetail();
+        // createProductDetail();
     } else if (product_sheet[1].classList.contains("bg-pink")) {
         showProductCards("nut", product.nut);
-        createProductDetail();
+        // createProductDetail();
     } else if (product_sheet[2].classList.contains("bg-pink")) {
         showProductCards("matcha", product.matcha);
-        createProductDetail();
+        // createProductDetail();
     } else if (product_sheet[3].classList.contains("bg-pink")) {
         showProductCards("fruit", product.fruit);
-        createProductDetail();
+        // createProductDetail();
     } else if (product_sheet[4].classList.contains("bg-pink")) {
         showProductCards("room_temp", product.room_temp);
-        createProductDetail();
+        // createProductDetail();
     } else {
         showProductCards("others", product.others);
-        createProductDetail();
+        // createProductDetail();
     }
 }
 
