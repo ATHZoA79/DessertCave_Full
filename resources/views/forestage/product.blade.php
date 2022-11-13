@@ -115,7 +115,7 @@
     <div class="product-detail-card">
       <div class="product-detail-close"><i class="bi bi-x-lg"></i></div>
       <div class="product-detail-img"><img src="" alt=""></div>
-      <div class="product-detail-text">文字
+      <div class="product-detail-text">
         <div class="product-detail-name"></div>
         <div class="product-detail-content"></div>
       </div>
