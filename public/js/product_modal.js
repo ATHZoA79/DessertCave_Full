@@ -144,6 +144,7 @@ function createProductDetail() {
 
     product_card.forEach((card) => {
         card.addEventListener("click", function show_detail() {
+            console.log("card clicked.");
             product_detail.classList.toggle("block-display");
             // Search product object by product name
             let t_series, t_item, series_key, item_key;
@@ -183,23 +184,18 @@ function close_detail() {
 async function setCards() {
     if (product_sheet[0].classList.contains("bg-pink")) {
         showProductCards("chocolate", product.chocolate);
-        // createProductDetail();
     } else if (product_sheet[1].classList.contains("bg-pink")) {
         showProductCards("nut", product.nut);
-        // createProductDetail();
     } else if (product_sheet[2].classList.contains("bg-pink")) {
         showProductCards("matcha", product.matcha);
-        // createProductDetail();
     } else if (product_sheet[3].classList.contains("bg-pink")) {
         showProductCards("fruit", product.fruit);
-        // createProductDetail();
     } else if (product_sheet[4].classList.contains("bg-pink")) {
         showProductCards("room_temp", product.room_temp);
-        // createProductDetail();
     } else {
         showProductCards("others", product.others);
-        // createProductDetail();
     }
+    createProductDetail();
 }
 
 // Main
