@@ -82,7 +82,7 @@ var product = {
         },
     },
     room_temp: {
-			// Series 5
+        // Series 5
         saturdaylemon: {
             name_zh: "周末檸檬磅蛋糕",
             content:
@@ -140,27 +140,27 @@ function showProductCards(series, item) {
     }
 }
 function createProductDetail() {
-	product_card.forEach((card) => {
-    // Create modal for default cards
-    card.addEventListener("click", function show_detail() {
-        product_detail.classList.toggle("block-display");
-        // Search product object by product name
-        let t_series, t_item, series_key, item_key;
-        for (let series in product) {
-            for ( let item in product[series]) {
-                if (
-                    product[series][item].name_zh ===
-                    card.querySelector(".product-name>h3").innerText
-                ) {
-                    item_key = item;
-                    t_item = product[series][item];
-                    series_key = series;
-                    t_series = series;
-                    break;
+    product_card.forEach((card) => {
+        // Create modal for default cards
+        card.addEventListener("click", function show_detail() {
+            product_detail.classList.toggle("block-display");
+            // Search product object by product name
+            let t_series, t_item, series_key, item_key;
+            for (let series in product) {
+                for (let item in product[series]) {
+                    if (
+                        product[series][item].name_zh ===
+                        card.querySelector(".product-name>h3").innerText
+                    ) {
+                        item_key = item;
+                        t_item = product[series][item];
+                        series_key = series;
+                        t_series = series;
+                        break;
+                    }
                 }
             }
-        }
-        product_detail.innerHTML = `
+            product_detail.innerHTML = `
                     <div class="product-detail-opacity"></div>
                     <div class="product-detail-card-container">
                       <div class="product-detail-card">
@@ -181,14 +181,14 @@ function createProductDetail() {
                         </div>
                     `;
 
-        document
-            .querySelector(".product-detail-close")
-            .addEventListener("click", close_detail);
-        document
-            .querySelector(".product-detail-opacity")
-            .addEventListener("click", close_detail);
+            document
+                .querySelector(".product-detail-close")
+                .addEventListener("click", close_detail);
+            document
+                .querySelector(".product-detail-opacity")
+                .addEventListener("click", close_detail);
+        });
     });
-});
 }
 function close_detail() {
     product_detail.classList.toggle("block-display");
@@ -204,24 +204,24 @@ product_sheet.forEach((sheet) => {
             element.classList.remove("bg-pink");
         });
         sheet.classList.add("bg-pink");
-        if (product_sheet[0].classList.contains("bg-pink")) {
-            showProductCards("chocolate", product.chocolate);
-            createProductDetail();
-        } else if (product_sheet[1].classList.contains("bg-pink")) {
-            showProductCards("nut", product.nut);
-            createProductDetail();
-        } else if (product_sheet[2].classList.contains("bg-pink")) {
-            showProductCards("matcha", product.matcha);
-            createProductDetail();
-        } else if (product_sheet[3].classList.contains("bg-pink")) {
-            showProductCards("fruit", product.fruit);
-            createProductDetail();
-        } else if (product_sheet[4].classList.contains("bg-pink")) {
-            showProductCards("room_temp", product.room_temp);
-            createProductDetail();
-        } else {
-            showProductCards("others", product.others);
-            createProductDetail();
-        }
     });
 });
+if (product_sheet[0].classList.contains("bg-pink")) {
+    showProductCards("chocolate", product.chocolate);
+    createProductDetail();
+} else if (product_sheet[1].classList.contains("bg-pink")) {
+    showProductCards("nut", product.nut);
+    createProductDetail();
+} else if (product_sheet[2].classList.contains("bg-pink")) {
+    showProductCards("matcha", product.matcha);
+    createProductDetail();
+} else if (product_sheet[3].classList.contains("bg-pink")) {
+    showProductCards("fruit", product.fruit);
+    createProductDetail();
+} else if (product_sheet[4].classList.contains("bg-pink")) {
+    showProductCards("room_temp", product.room_temp);
+    createProductDetail();
+} else {
+    showProductCards("others", product.others);
+    createProductDetail();
+}
