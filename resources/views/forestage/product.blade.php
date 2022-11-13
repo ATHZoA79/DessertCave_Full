@@ -69,7 +69,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/sesame.png" data-product="sesame" alt="">
+      <img src="./img/product/others/sesame.png" data-product="sesame" alt="">
     </div>
     <div class="product-name">
       <h3>Sesame Sesame</h3>
@@ -77,7 +77,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/furit/grapelemon.png" data-product="grapelemon" alt="">
+      <img src="./img/product/fruit/grapelemon.png" data-product="grapelemon" alt="">
     </div>
     <div class="product-name">
       <h3>綠葡萄檸檬乳酪</h3>
@@ -85,7 +85,7 @@
   </div>
   <div class="product-card">
     <div class="img-container">
-      <img src="./img/product/furit/lemon3.png" data-product="lemon3" alt="">
+      <img src="./img/product/fruit/lemon3.png" data-product="lemon3" alt="">
     </div>
     <div class="product-name">
       <h3>義式奶油檸檬塔</h3>
