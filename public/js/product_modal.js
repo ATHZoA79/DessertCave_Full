@@ -139,51 +139,15 @@ function showProductCards(series, item) {
 						`;
     }
 }
-function createProductDetail(series, item) {
-    var product_card = document.querySelectorAll(".product-card");
-    product_card.forEach((value, index) => {
-        value.addEventListener("click", function show_detail() {
-            product_detail.classList.toggle("block-display");
-            product_detail_img.innerHTML =
-                screen.width > 430
-                    ? `<img src="./img/product/${series}/${
-                          Object.keys(item)[index]
-                      }-detail.png" data-product="${
-                          Object.keys(item)[index]
-                      }" alt=""></div>`
-                    : `<img src="./img/product/${series}/${
-                          Object.keys(item)[index]
-                      }-detail-phone.png" data-product="${
-                          Object.keys(item)[index]
-                      }" alt=""></div>`;
-            product_detail_name.innerHTML = Object.values(item)[index].name_zh;
-            product_detail_content.innerHTML =
-                Object.values(item)[index].content;
-
-            // make Modal closable
-            document
-                .querySelector(".product-detail-close")
-                .addEventListener("click", close_detail);
-            document
-                .querySelector(".product-detail-opacity")
-                .addEventListener("click", close_detail);
-        });
-    });
-}
-function close_detail() {
-    product_detail.classList.toggle("block-display");
-}
-
-// Main
-var product_card = document.querySelectorAll(".product-card");
-product_card.forEach((card) => {
+function createProductDetail() {
+	product_card.forEach((card) => {
     // Create modal for default cards
     card.addEventListener("click", function show_detail() {
         product_detail.classList.toggle("block-display");
         // Search product object by product name
         let t_series, t_item, series_key, item_key;
-        for (series in product) {
-            for (item in product[series]) {
+        for (let series in product) {
+            for ( let item in product[series]) {
                 if (
                     product[series][item].name_zh ===
                     card.querySelector(".product-name>h3").innerText
@@ -225,6 +189,14 @@ product_card.forEach((card) => {
             .addEventListener("click", close_detail);
     });
 });
+}
+function close_detail() {
+    product_detail.classList.toggle("block-display");
+}
+
+// Main
+var product_card = document.querySelectorAll(".product-card");
+createProductDetail();
 
 product_sheet.forEach((sheet) => {
     sheet.addEventListener("click", function () {
