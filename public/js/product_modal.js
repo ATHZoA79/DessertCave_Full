@@ -1,4 +1,3 @@
-const product_card = document.querySelectorAll(".product-card");
 const product_card_area = document.querySelector(".product-card-area");
 const product_detail = document.querySelector(".product-detail-area");
 const product_detail_close = document.querySelector(".product-detail-close");
@@ -141,6 +140,8 @@ function showProductCards(series, item) {
     }
 }
 function createProductDetail() {
+    let product_card = document.querySelectorAll(".product-card");
+
     product_card.forEach((card) => {
         card.addEventListener("click", function show_detail() {
             product_detail.classList.toggle("block-display");
@@ -165,7 +166,7 @@ function createProductDetail() {
                     ? `<img src="./img/product/${series_key}/${item_key}-detail.png" alt="">`
                     : `<img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt="">`;
             product_detail_name.innerHTML = t_item.name_zh;
-						product_detail_content.innerHTML = t_item.content;
+            product_detail_content.innerHTML = t_item.content;
 
             document
                 .querySelector(".product-detail-close")
@@ -203,6 +204,7 @@ async function setCards() {
 
 // Main
 // Create modal for default cards
+let product_card = document.querySelectorAll(".product-card");
 createProductDetail();
 
 product_sheet.forEach((sheet) => {
