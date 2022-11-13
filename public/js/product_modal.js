@@ -5,7 +5,7 @@ const product_detail_opacity = document.querySelector(
     ".product-detail-opacity"
 );
 const product_sheet = document.querySelectorAll(".product-series");
-const product_detail_img = document.querySelector(".product-detail-img>img");
+const product_detail_img = document.querySelector(".product-detail-img");
 const product_detail_name = document.querySelector(".product-detail-name");
 const product_detail_content = document.querySelector(
     ".product-detail-content"
