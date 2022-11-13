@@ -160,12 +160,12 @@ function createProductDetail() {
                     }
                 }
             }
-            product_detail_img =
+            product_detail_img.innerHTML =
                 screen.width > 430
                     ? `<img src="./img/product/${series_key}/${item_key}-detail.png" alt="">`
                     : `<img src="./img/product/${series_key}/${item_key}-detail-phone.png" alt="">`;
-            product_detail_name = t_item.name_zh;
-						product_detail_content = t_item.content;
+            product_detail_name.innerHTML = t_item.name_zh;
+						product_detail_content.innerHTML = t_item.content;
 
             document
                 .querySelector(".product-detail-close")
